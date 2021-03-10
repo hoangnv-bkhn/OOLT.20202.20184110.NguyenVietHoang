@@ -19,10 +19,21 @@ public class NumericArray {
 			System.out.println(A[i]);
 		}
 
-		int sum = 0;
+		int sum = 0, n;
 
+		do {
 		System.out.print("Enter number elements of array: ");
-		int n = scanner.nextInt();
+		while(!scanner.hasNextInt()) {
+			String input = scanner.next();
+            System.out.printf("\"%s\" is not a valid number.\n", input);
+            System.out.print("Number elements of array must be greater than or equal to 0 and less than 1000: ");
+		}
+		n = scanner.nextInt();
+		
+		if(n < 0 || n >= 1000) {
+            System.out.print("Number elements of array must be greater than or equal to 0 and less than 1000\n");
+		}
+		}while(n < 0 || n >= 1000);
 
 		Integer[] m = new Integer[n];
 		
@@ -37,6 +48,7 @@ public class NumericArray {
 			m[i] = scanner.nextInt();
 			}
 		}
+		
 		int choice = 0;
 		do {
 			System.out.println("==============================");
@@ -51,9 +63,8 @@ public class NumericArray {
 			}
 			choice = scanner.nextInt();
 			
-			while(choice < 1 || choice > 2) {
-                System.out.print("Your choice must be greater than 1 and less than 2: ");
-                choice = scanner.nextInt();
+			if(choice < 1 || choice > 2) {
+                System.out.print("Your choice must be greater than 1 and less than 2\n");
 			}
 		} while (choice < 1 || choice > 2);
 		
