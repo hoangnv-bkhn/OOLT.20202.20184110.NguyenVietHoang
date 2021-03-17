@@ -1,6 +1,6 @@
 package lab03;
 
-public class DataTest {
+public class DateTest {
 	
 	public static void main(String[] args) {
 		
