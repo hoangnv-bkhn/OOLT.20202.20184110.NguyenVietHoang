@@ -58,7 +58,6 @@ public class GUI {
 		main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		main.getContentPane().setLayout(null);
 
-//		JTextArea showInfor = new JTextArea();
 		showInfor.setBounds(10, 62, 784, 413);
 		main.getContentPane().add(showInfor);
 
